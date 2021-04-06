@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
   
     <title>ご意見入力</title>
 </head>
 <body>
 
-    <cfform action="request_send.cfml" method="POST">
+    <form action="request_send.cfml" method="POST">
     Emailアドレス：<br>
     <input type="text" name="Email_address" size="30" maxlength="30">
     <br>
@@ -14,7 +14,7 @@
     <textarea name="RequestBody" rows="6" cols="30"></textarea>
     <br>
     <input type="submit" value="送信">
-</cfform>
+</form>
 
 </body>
 </html>
