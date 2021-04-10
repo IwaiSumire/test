@@ -14,7 +14,7 @@
     </head>
 
 <body>
-    <h1>映画リスト<h1>
+    <h1>映画リストアメリカのみ<h1>
         <table border="3">
             <tr>
                 <td><b>年</b></td>
@@ -30,6 +30,7 @@
                 </cfoutput>
             </table>
 <br>
+<h1>全部<h1>
             <table border="3">
                 <tr>
                     <td><b>年</b></td>
@@ -44,7 +45,7 @@
     
                     </cfoutput>
                 </table>
-
+                <br>
 
                 <cfquery datasource="sample" name="join">
                     select movie.title,oscar.title,movie.year,oscar.annual
@@ -52,7 +53,7 @@
                     where movie.title=oscar.title
                 </cfquery>
 
-                <h1>オスカー</h1>
+                <h1>オスカーの映画</h1>
 
                  <!---ボーダーあり、CFCOLのヘッダー表示、HTML形式--->
                 <cftable  query="join" colheaders htmltable border>
