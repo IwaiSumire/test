@@ -12,7 +12,7 @@
 <br>
 <br>
 
-<a href="./movie_display.cfm">ここで確認できます</a>
+<a href="./movie_display.cfm">表に戻る</a>
 
 
 </body>

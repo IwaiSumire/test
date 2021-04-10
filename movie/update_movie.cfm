@@ -6,7 +6,7 @@
 <cfquery datasource="sample" name="update">
 select year,title,actor,company
 from movie
-WHERE movieID=#movieID#
+WHERE "movieID"=#movieID#
 </cfquery>
 
 <cfoutput query="update"><!---select結果を表示--->
@@ -27,14 +27,14 @@ WHERE movieID=#movieID#
 公開された年：
 <input type="text" name="year" size="15" maxlength="15" value="#Trim(year)#"><!---文字列から先頭と末尾のスペースと制御文字を削除します--->
 <br>
-映画のタイトル：
+主演俳優女優：
 <input type="text" name="actor" size="30" maxlength="15" value="#Trim(actor)#"><!---文字列から先頭と末尾のスペースと制御文字を削除します--->
 <br>
 国：
 <input type="text" name="company" size="20" maxlength="15" value="#Trim(company)#"><!---文字列から先頭と末尾のスペースと制御文字を削除します--->
 <br>
 <br>
-<input type="submit" value="追加">
+<input type="submit" value="更新">
 <input type="reset" value="リセット">
 </form>
 

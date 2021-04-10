@@ -1,4 +1,11 @@
-<cfupdate  datasource="sample"  tablename="movie">
+<cfquery datasource=sample>
+    update movie
+    set year='#year#', 
+        title='#title#',
+        actor='#actor#',
+        company='#company#'
+        where "movieID" = #movieID#
+</cfquery>
 
     <cfoutput>
         <html>
@@ -12,7 +19,7 @@
                 <br>
                 <br>
 
-                <a href="./movie_dispaly.cfm">ここでリストを確認</a>
+                <a href="./movie_display.cfm">ここでリストを確認</a>
         </body>
     </html>
 
