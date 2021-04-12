@@ -4,8 +4,9 @@
         title='#title#',
         actor='#actor#',
         company='#company#'
-        where "movieID" = #movieID#
+    where "movieID" = #movieID#
 </cfquery>
+<cflocation  url="./movie_display.cfm">
 
     <cfoutput>
         <html>

@@ -1,9 +1,15 @@
+<cfset MaxRows = 5>
+<cfparam  name="top" default="1"><!---変数の存在を確認し、存在していれば設定する--->
 <cfquery datasource="sample" name="oscar">
     select *
     from oscar
 </cfquery><!--- 年とタイトルと取得し、get_movieに入れておく--->
 <cfquery datasource="sample" name="all">
     select *
+    from movie
+</cfquery>
+<cfquery datasource="sample" name="information">
+    select count(*) as How_mony
     from movie
 </cfquery>
 
@@ -19,9 +25,17 @@
     <a href="./add_movie.cfm">
         <button type="button">映画を追加する</button>
         </a>
+        <br>
+        <br>
+        <a href="./loopDisplay.cfm">
+            <button type="button">最近登録したデータだけみる</button>
+            </a>
     
 <br>
 <h1>全部<h1>
+    <cfoutput query="information">
+       <h3> 現在登録されている映画の本数は#How_mony#本です。</h3>
+    </cfoutput>
             <table border="3">
                 <tr>
                     <td><b>年</b></td>
@@ -30,7 +44,8 @@
                     <td><b>更新</b></td>
                     <td><b>消去</b></td>
                 </tr>
-                    <cfoutput query="all">
+            
+                    <cfoutput query="all" startrow="#top#" MAXROWS="#MaxRows#">
     
                         <tr>
                             <td>#year#</td>
@@ -54,6 +69,16 @@
     
                     </cfoutput>
                 </table>
+
+                <cfset NexStart = top + MaxRows>
+<br>
+                <cfoutput>
+                    
+                <form action="movie_display.cfm" method="post">
+                    <input type="Hidden" name="top" value="#NexStart#">
+                    <input type="submit" value="次の#MaxRows#件へ">
+                </form>
+                </cfoutput>
                 <br>
 
                 <cfquery datasource="sample" name="join">

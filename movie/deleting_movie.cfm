@@ -2,7 +2,7 @@
     delete from movie
     where "movieID" = #movieID#
 </cfquery>
-
+<cflocation  url="./movie_display.cfm"><!---location以降は無視される--->
 
 <cfoutput>
 

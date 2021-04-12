@@ -12,6 +12,7 @@
     <cfcol  header="年"  text="#year#">
     <cfcol  header="俳優女優"  text="#actor#">
     <cfcol  header="国"  text="#company#">
+        
 </cftable>
 
 <br>

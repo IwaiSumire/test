@@ -8,6 +8,8 @@
 
 
 <h1>リストに映画が追加されました</h1>
+
+
 <cfoutput>[#title#]が追加されました</cfoutput>
 <br>
 <br>
