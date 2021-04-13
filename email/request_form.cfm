@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
     <head>
@@ -7,6 +8,7 @@
     </head>
 
 <body>
+    
 
     <form action="request_send.cfm" method="POST">
         Emailアドレス：<br>
