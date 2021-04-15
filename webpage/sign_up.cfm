@@ -10,7 +10,7 @@
             </cfif>
 
             <cfif isDefined("url.lack")>
-                <p>空欄があります。すべて埋めてください</p>
+                <p id="kuu">空欄があります。すべて埋めてください</p>
             </cfif>
 
             <h3>登録情報を登録してください</h3>
@@ -20,7 +20,7 @@
                   性：<input type="text" name="iname"><br>
                   名：<input type="text" name="fname"><br>
                   ID：<input type="text" name="userid"><br>
-        email:<input type="text" name="email"><br>
+        　　　　　email:<input type="text" name="email"><br>
                  pass:<input type="password" name="password"><br><br>
 
                 <input type="submit" value="登録">

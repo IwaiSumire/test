@@ -23,6 +23,7 @@
                 名前 #iname#<br>
                 メールアドレス #email#<br>
                 password(文字数)
+                
                 <cfloop index="kome" from="1" to="#len(password)#">
                     *
                 </cfloop>
