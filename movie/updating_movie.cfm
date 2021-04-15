@@ -1,4 +1,4 @@
-<cfquery datasource=sample>
+<cfquery datasource="sample">
     update movie
     set year='#year#', 
         title='#title#',
