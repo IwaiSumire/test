@@ -1,3 +1,9 @@
+<cfif (form.suggestion_title is "") or (form.login_suggestion_contentspass is "")
+or (form.type_id is "") or (form.filingdate is "")
+or (form.result_id is "") or (form.login_id is "")>
+<meta http-equiv="refresh" content="0;url=newImp.cfm?nullNotLogin=yes">
+</cfif>
+
 <cfquery datasource="sample">
     insert into suggestion
     (

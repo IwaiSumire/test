@@ -16,6 +16,11 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
         <title>トップページ</title>
     </head>
 <br>
+
+<cfoutput>
+<h3>現在のログインユーザー：#cookie.cemployee_name#さん</h3>
+</cfoutput>
+
     <a href="./all_list.cfm">
         <button type="button">過去の全てのリスト</button>
     </a>
@@ -23,12 +28,15 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
     <a href="./newImp.cfm">
         <button type="button">新規登録はこちら</button>
     </a>
-
+    
+    <a href="./logout.cfm">
+        <button type="button">ログアウト</button>
+    </a>
     
     <hr style="height:3px; background-color:#ff9999;">
 
 
-    <body>
+    <body bgcolor="#ffffff">
     <h2>今月改善提案一覧表<h2>
         <table border="3">
             <tr>
@@ -58,7 +66,8 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
                         </td>
                         <td>
                             
-                            <button type="button">消去</button>
+                            <a href="./delete.cfm?suggestion_id=#suggestion_id#">
+                                <button type="button">消去</button>
                             </a>
                         </td>
                     </tr>
