@@ -2,11 +2,12 @@
 <cfif (form.login_id is "") or (form.login_pass is "")>
     <meta http-equiv="refresh" content="0;url=logintop.cfm?nullNotLogin=yes">
 </cfif>
+<cfset login_pass = #hash(form.login_pass,'SHA-256')#>
 <cfquery datasource="sample" name="dologin">
 select *
 from employee
 where '#form.login_id#' = login_id
-and '#form.login_pass#' = login_pass
+and '#login_pass#' = login_pass
 </cfquery>
 
 <cfif dologin.employee_id is not ""><!---もし、idとpassが一致するものが見つからなければ--->

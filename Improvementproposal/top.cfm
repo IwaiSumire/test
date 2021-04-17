@@ -14,7 +14,9 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
 <html>
     <head>
         <title>トップページ</title>
+        <link rel="stylesheet" href="style/top.css">
     </head>
+<body>
 <br>
 
 <cfoutput>
@@ -36,9 +38,10 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
     <hr style="height:3px; background-color:#ff9999;">
 
 
-    <body bgcolor="#ffffff">
+    
     <h2>今月改善提案一覧表<h2>
-        <table border="3">
+        
+        <table border="3" class="tab">
             <tr>
                 <td><b>タイトル</b></td>
                 <td><b>提出者</b></td>
@@ -64,10 +67,10 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
                                 <button type="button">変更</button>
                             </a>
                         </td>
-                        <td>
+                        <td class="delete">
                             
-                            <a href="./delete.cfm?suggestion_id=#suggestion_id#">
-                                <button type="button">消去</button>
+                       <a href="./delete.cfm?suggestion_id=#suggestion_id#" onClick="disp(); return false;">
+                                <button type="button" >消去</button>
                             </a>
                         </td>
                     </tr>

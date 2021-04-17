@@ -1,6 +1,6 @@
 <cfif isDefined("url.nullNotLogin")>
     <br>
-    <center><font color="white">idかpasswordに空欄があります。</font></center>
+    <center><font color="white">社員IDかパスワードに空欄があります。</font></center>
 </cfif>
 <cfif isDefined("url.badLogin")>
     <br>
@@ -32,6 +32,6 @@
   </form>
 </body>
   <footer>
-    <h5>Right click and visit: <a target="_blank" href="http://lifes.gd">New User Registrationd</a></h5>
+    <h5>click! <a href="./useradd.cfm">New User Registrationd</a></h5>
   </footer>
 </html>
