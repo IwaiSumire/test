@@ -7,6 +7,12 @@
     <center><font color="white">登録がないようです。</font></center>
     <center><font color="white">新規の場合は会員登録をしてください。</font></center>
 </cfif>
+<cfif isDefined("url.logout")>
+  <br>
+  <center><font color="white">登録がないようです。</font></center>
+  <center><font color="white">新規の場合は会員登録をしてください。</font></center>
+</cfif>
+
 
 <html>
     <head>

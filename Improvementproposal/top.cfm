@@ -1,3 +1,4 @@
+
 <cfset MaxRows = 20>
 <cfparam  name="top" default="1"><!---変数の存在を確認し、存在していれば設定する--->
 <cfquery datasource="sample" name="toplist">
@@ -16,6 +17,9 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
         <title>トップページ</title>
         <link rel="stylesheet" href="style/top.css">
     </head>
+
+    <script>
+    </script>
 <body>
 <br>
 
@@ -94,3 +98,4 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
             </cfoutput>
         </body>
 </html>
+
