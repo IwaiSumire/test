@@ -34,6 +34,7 @@
                 提出者：#employee_name#</td></tr>
                 <tr><th>申請状況</th>
                     <td>#result#</td></tr>
+               
               
               </table>
         

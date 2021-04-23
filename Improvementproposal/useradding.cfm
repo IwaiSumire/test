@@ -42,11 +42,11 @@ AND refind('[0-9]',form.login_pass)
 <cfquery datasource="sample">
 insert into employee
 (
-    employee_name,department_id,login_id,login_pass,email
+    employee_name,department_id,login_id,login_pass,email,authority_id
 )
 values
 (
-    '#form.employee_name#',#form.department_id#,#form.login_id#,'#login_pass#','#form.email#'
+    '#form.employee_name#',#form.department_id#,#form.login_id#,'#login_pass#','#form.email#','#form.authority_id#'
 )
 </cfquery>
 

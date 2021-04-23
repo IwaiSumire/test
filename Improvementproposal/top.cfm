@@ -1,6 +1,5 @@
-
 <cfset MaxRows = 20>
-<cfparam  name="top" default="1"><!---変数の存在を確認し、存在していれば設定する--->
+<cfparam name = "top" default="1"><!---変数の存在を確認し、存在していれば設定する--->
 <cfquery datasource="sample" name="toplist">
 select *
 from suggestion,employee,result
@@ -15,13 +14,35 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
 <html>
     <head>
         <title>トップページ</title>
+        
+
         <link rel="stylesheet" href="style/top.css">
+
+        <script>
+            function set2fig(num) {
+   // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+   var ret;
+   if( num < 10 ) { ret = "0" + num; }
+   else { ret = num; }
+   return ret;
+}
+function showClock2() {
+   var nowTime = new Date();
+   var nowHour = set2fig( nowTime.getHours() );
+   var nowMin  = set2fig( nowTime.getMinutes() );
+   var nowSec  = set2fig( nowTime.getSeconds() );
+   var msg = "現在時刻:" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
+   document.getElementById("RealtimeClockArea2").innerHTML = msg;
+}
+setInterval('showClock2()',1000);
+        </script>
     </head>
 
     <script>
     </script>
 <body>
 <br>
+
 
 <cfoutput>
 <h3>現在のログインユーザー：#cookie.cemployee_name#さん</h3>
@@ -38,19 +59,27 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
     <a href="./logout.cfm">
         <button type="button">ログアウト</button>
     </a>
-    
+
+    <div="box2">
+        <p id="RealtimeClockArea2"></p>
+    </div>
+ 
     <hr style="height:3px; background-color:#ff9999;">
+    
 
 
     
     <h2>今月改善提案一覧表<h2>
         
-        <table border="3" class="tab">
+        <table border="3" class="tab" width="1000px">
             <tr>
                 <td><b>タイトル</b></td>
                 <td><b>提出者</b></td>
                 <td><b>提出日</b></td>
                 <td><b>申請状況</b></td>
+                <td><b>詳細/承認</b></td>
+                <td><b>  変更  </b></td>
+                <td><b>  消去  </b></td>
             </tr>
         
                 <cfoutput query="toplist" startrow="#top#" MAXROWS="#MaxRows#">
@@ -60,10 +89,11 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
                         <td>#employee_name#</td>
                         <td>#filingdate#</td>
                         <td>#result#</td>
+                        
                         <td>
                             
                             <a href="./show.cfm?suggestion_id=#suggestion_id#">
-                                <button type="button">詳細</button>
+                                <button type="button">詳細/承認</button>
                             </a>
                         </td>
                         <td>
@@ -72,8 +102,16 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
                             </a>
                         </td>
                         <td class="delete">
+
+
                             
-                       <a href="./delete.cfm?suggestion_id=#suggestion_id#" onClick="disp(); return false;">
+                            
+                       <a href="./delete.cfm?suggestion_id=#suggestion_id#">
+
+
+
+
+
                                 <button type="button" >消去</button>
                             </a>
                         </td>
@@ -98,4 +136,3 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
             </cfoutput>
         </body>
 </html>
-

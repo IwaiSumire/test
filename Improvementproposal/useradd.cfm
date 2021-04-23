@@ -40,6 +40,10 @@
             <input type="text" name="login_pass"></p>
             <p>メールアドレス<br>
             <input type="text" name="email"></p>
+            <input type="radio" name="authority_id" value="1">管理者
+            <input type="radio" name="authority_id" value="2" >承認者
+            <input type="radio" name="authority_id" value="3" checked>ユーザ
+            <br>
             <br>
             <input type="submit">
         </form>

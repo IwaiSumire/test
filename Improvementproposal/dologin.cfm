@@ -14,6 +14,8 @@ and '#login_pass#' = login_pass
 
     <cfcookie name="clogin_id" value="#dologin.login_id#"><!---ログインidをcookieに保存--->
     <cfcookie name="cemployee_name" value="#dologin.employee_name#"><!---ログインidをcookieに保存--->
+    <cfcookie name="c_authority_id" value="#dologin.authority_id#"><!---ログインidをcookieに保存--->
+
     <meta http-equiv="refresh" content="0;url=top.cfm"><!---ログインする→toppageに行く--->
 
 </cfif>
