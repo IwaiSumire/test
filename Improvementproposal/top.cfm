@@ -15,8 +15,7 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
     <head>
         <title>トップページ</title>
         
-
-        <link rel="stylesheet" href="style/top.css">
+        <link rel="stylesheet" href="style/top.css?v=2">
 
         <script>
             function set2fig(num) {
@@ -70,6 +69,12 @@ setInterval('showClock2()',1000);
 
     
     <h2>今月改善提案一覧表<h2>
+
+        <form action="search.cfm" method="post">
+        <span class="search">条件に一致するものを検索する</span>
+        <input type="search" name="search" placeholder="キーワードを入力">
+        <input type="submit" value="検索">
+        </form>
         
         <table border="3" class="tab" width="1000px">
             <tr>
@@ -103,8 +108,6 @@ setInterval('showClock2()',1000);
                         </td>
                         <td class="delete">
 
-
-                            
                             
                        <a href="./delete.cfm?suggestion_id=#suggestion_id#">
 
