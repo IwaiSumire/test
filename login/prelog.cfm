@@ -18,7 +18,8 @@
 
             <h3>会員の方はこちら</h3>
             
-            <form action="dologin.cfm" method="post" target="_top"><!---フレーム分割を解除してウィンドウ全体に表示--->
+            <form action="dologin.cfm" method="post" target="_top">
+                <!---フレーム分割を解除してウィンドウ全体に表示--->
 
             ユーザID：
             <input type="text" size="20" mexlength="50" name="userid"><br>

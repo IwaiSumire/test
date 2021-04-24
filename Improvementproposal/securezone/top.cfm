@@ -15,26 +15,11 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
     <head>
         <title>トップページ</title>
         
-        <link rel="stylesheet" href="style/top.css?v=2">
+        <script type="text/javascript" src="../jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../js/top.js"></script>
+        <link rel="stylesheet" href="../style/top.css?v=2">
+        
 
-        <script>
-            function set2fig(num) {
-   // 桁数が1桁だったら先頭に0を加えて2桁に調整する
-   var ret;
-   if( num < 10 ) { ret = "0" + num; }
-   else { ret = num; }
-   return ret;
-}
-function showClock2() {
-   var nowTime = new Date();
-   var nowHour = set2fig( nowTime.getHours() );
-   var nowMin  = set2fig( nowTime.getMinutes() );
-   var nowSec  = set2fig( nowTime.getSeconds() );
-   var msg = "現在時刻:" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
-   document.getElementById("RealtimeClockArea2").innerHTML = msg;
-}
-setInterval('showClock2()',1000);
-        </script>
     </head>
 
     <script>
@@ -42,26 +27,34 @@ setInterval('showClock2()',1000);
 <body>
 <br>
 
+<div class="head">
 
 <cfoutput>
 <h3>現在のログインユーザー：#cookie.cemployee_name#さん</h3>
 </cfoutput>
 
+<div class="header">
     <a href="./all_list.cfm">
-        <button type="button">過去の全てのリスト</button>
+        <button type="button" class="btn">過去の全てのリスト</button>
     </a>
     
     <a href="./newImp.cfm">
-        <button type="button">新規登録はこちら</button>
+        <button type="button" class="btn">新規登録はこちら</button>
     </a>
     
     <a href="./logout.cfm">
-        <button type="button">ログアウト</button>
+        <button type="button" class="btn">ログアウト</button>
+    </a>
+    <a href="./usershow.cfm">
+        <button type="button" class="btn">登録社員一覧はこちら</button>
     </a>
 
     <div="box2">
         <p id="RealtimeClockArea2"></p>
     </div>
+
+</div>
+</div>
  
     <hr style="height:3px; background-color:#ff9999;">
     
@@ -73,7 +66,7 @@ setInterval('showClock2()',1000);
         <form action="search.cfm" method="post">
         <span class="search">条件に一致するものを検索する</span>
         <input type="search" name="search" placeholder="キーワードを入力">
-        <input type="submit" value="検索">
+       <input type="submit" value="検索" id="search" class="inli"><p class="tooltip inli">検索ができます。</p>
         </form>
         
         <table border="3" class="tab" width="1000px">
@@ -111,11 +104,7 @@ setInterval('showClock2()',1000);
                             
                        <a href="./delete.cfm?suggestion_id=#suggestion_id#">
 
-
-
-
-
-                                <button type="button" >消去</button>
+                                <button type="button" class="delete">消去</button>
                             </a>
                         </td>
                     </tr>
