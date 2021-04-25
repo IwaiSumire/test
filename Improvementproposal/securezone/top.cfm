@@ -19,7 +19,7 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
         
         <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="../js/top.js"></script>
-        <link rel="stylesheet" href="../style/top.css?v=41">
+        <link rel="stylesheet" href="../style/top.css?v=43">
         
         
     </head>
@@ -95,18 +95,18 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
                         <td>#filingdate#</td>
                         <td>#result#</td>
                         
-                        <td>
+                        <td class="tbbtn">
                             
                             <a href="./show.cfm?suggestion_id=#suggestion_id#">
                                 <button type="button">詳細/承認</button>
                             </a>
                         </td>
-                        <td>
+                        <td class="tbbtn">
                             <a href="./update.cfm?suggestion_id=#suggestion_id#">
                                 <button type="button">変更</button>
                             </a>
                         </td>
-                        <td class="delete">
+                        <td class="tbbtn">
 
                             
                        <a href="./delete.cfm?suggestion_id=#suggestion_id#">

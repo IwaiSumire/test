@@ -82,7 +82,8 @@ table {
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
-    text-align: center
+    text-align: center;
+    
 
 }
 
@@ -92,5 +93,10 @@ table {
   transform: translateY(4px);/*下に動く*/
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
   border-bottom: none;
+
+}
+
+.tbbtn {
+    text-align: center;
 
 }
