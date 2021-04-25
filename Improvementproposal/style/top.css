@@ -43,21 +43,18 @@ body {
 
 }
 /* ふきだし */
-td {
-    position:relative;
-}
+
 
 .tooltip {
     
     width:130px;
     padding:10px;
-    font-size:5px;
-    margin:-30px 0 0;
+    font-size:9px;
     background-color:#666;
     color:#fff;
-    position:absolute;
-    right:160px;
-    top: 50%;
+    display: inline-block;
+    margin-left: 30px;
+  
 }
 
 .tooltip:before {
@@ -67,13 +64,33 @@ td {
   content: " ";
   height: 0;
   width: 0;
-  position: absolute;
+  position:fixed;
   border-color: rgba(102, 102, 102, 0);
   border-right-color: #5e5e5e;
   border-width: 8px;
   margin-top: -8px;
 }
 
-.inli {
-    display: inline-block;
+table {
+    margin-top: 30px;
+}
+
+.tab button { display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    text-align: center
+
+}
+
+.tab button :active {
+    /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+
 }

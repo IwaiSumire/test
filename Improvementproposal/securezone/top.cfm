@@ -12,49 +12,56 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
 </cfquery>
 
 <html>
+
+    <div>
     <head>
         <title>トップページ</title>
         
-        <script type="text/javascript" src="../jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="../js/top.js"></script>
-        <link rel="stylesheet" href="../style/top.css?v=2">
+        <link rel="stylesheet" href="../style/top.css?v=41">
         
-
+        
     </head>
 
-    <script>
-    </script>
+    
 <body>
+
+
 <br>
 
-<div class="head">
+<header class="head">
 
-<cfoutput>
-<h3>現在のログインユーザー：#cookie.cemployee_name#さん</h3>
-</cfoutput>
+    <cfoutput>
+        <br>
+        <h3>現在のログインユーザー：#cookie.cemployee_name#さん</h3>
 
-<div class="header">
-    <a href="./all_list.cfm">
-        <button type="button" class="btn">過去の全てのリスト</button>
-    </a>
-    
-    <a href="./newImp.cfm">
-        <button type="button" class="btn">新規登録はこちら</button>
-    </a>
-    
-    <a href="./logout.cfm">
-        <button type="button" class="btn">ログアウト</button>
-    </a>
-    <a href="./usershow.cfm">
-        <button type="button" class="btn">登録社員一覧はこちら</button>
-    </a>
+    </cfoutput>
 
-    <div="box2">
-        <p id="RealtimeClockArea2"></p>
+</header>
+
+<nav>
+
+    <div class="headbtn">
+
+        <a href="./all_list.cfm">
+            <button type="button" class="btn">過去の全てのリスト</button>
+        </a>
+
+        <a href="./newImp.cfm">
+            <button type="button" class="btn">新規登録はこちら</button>
+        </a>
+
+        <a href="./logout.cfm">
+            <button type="button" class="btn">ログアウト</button>
+        </a>
+        <a href="./usershow.cfm">
+            <button type="button" class="btn">登録社員一覧はこちら</button>
+        </a>
+
     </div>
 
-</div>
-</div>
+</nav>
  
     <hr style="height:3px; background-color:#ff9999;">
     
@@ -66,7 +73,7 @@ date_part('month',now())=date_part('month',suggestion.filingdate)
         <form action="search.cfm" method="post">
         <span class="search">条件に一致するものを検索する</span>
         <input type="search" name="search" placeholder="キーワードを入力">
-       <input type="submit" value="検索" id="search" class="inli"><p class="tooltip inli">検索ができます。</p>
+        <input type="submit" value="検索" id="search" class="inli"><p class="tooltip">検索ができます。</p>
         </form>
         
         <table border="3" class="tab" width="1000px">

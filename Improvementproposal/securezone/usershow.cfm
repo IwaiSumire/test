@@ -20,7 +20,7 @@
         
         <title>登録ユーザ確認</title>
     
-        <script type="text/javascript" src="../jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="../js/usershow.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
         <link rel="stylesheet" href="../style/usershow.css?v=2">
