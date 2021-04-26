@@ -1,5 +1,6 @@
-.delete button{
-    background-color: red;
+h1 {
+    color: #FFF;
+    text-align: center;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
     color: white;
    font-weight: bold;
     cursor: pointer;
+    
 
 }
 /* ふきだし */
@@ -73,6 +75,9 @@ body {
 
 table {
     margin-top: 30px;
+    overflow: hidden;
+    margin-left: 30px;
+   
 }
 
 .tab button { display: inline-block;
@@ -100,3 +105,61 @@ table {
     text-align: center;
 
 }
+
+.deletepop {
+    color: red;
+    float: left;
+    right: 100px;
+    font-size: 120%;
+}
+
+.nexrbtn {
+    clear: left;
+    margin-top: 100px;
+}
+
+
+/* これ以降はヘッダー */
+
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+
+header {
+    background-color: orange;
+    height: 150px;
+}
+
+header * {
+    margin-left: 30px;
+}
+
+nav {
+    background-color:coral;
+    height: 100px;
+}
+
+nav * {
+    margin-left: 15px;
+    padding-top: 30px;
+}
+
+
+.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .headbtn {
+      text-align: center;
+  }
+
+  .sabtitle {
+      margin-left: 30px;
+      margin-top: 10px;
+  }

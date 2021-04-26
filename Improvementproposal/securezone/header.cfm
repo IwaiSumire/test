@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ヘッダー</title>
 
+    <link rel="stylesheet" href="../style/header.css?v=2">
+
     <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../js/header.js"></script>
-    <link rel="stylesheet" href="../style/header.css?v=2">
+    
 
 </head>
 

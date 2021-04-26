@@ -1,32 +1,25 @@
 
+$(function () {
+    $('.tooltip').hide();//まず隠しておく
 
+    $('#search').hover(//searchの上に乗ったときにフェードイン、アウトする
+        function () {
+            $('.tooltip').fadeIn('fast');
+        },
+        function () {
+            $('.tooltip').fadeOut('fast');
+        });
 
-function set2fig(num) {
-    // 桁数が1桁だったら先頭に0を加えて2桁に調整する
-    var ret;
-    if( num < 10 ) { ret = "0" + num; }
-    else { ret = num; }
-    return ret;
- }
- function showClock2() {
-    var nowTime = new Date();
-    var nowHour = set2fig( nowTime.getHours() );
-    var nowMin  = set2fig( nowTime.getMinutes() );
-    var nowSec  = set2fig( nowTime.getSeconds() );
-    var msg = "現在時刻:" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
-    document.getElementById("RealtimeClockArea2").innerHTML = msg;
- }
- setInterval('showClock2()',1000);
+    $('.delete').hide();//まず隠しておく
+   
 
+    $('.deletebtn').hover(//searchの上に乗ったときにフェードイン、アウトする
+        function () {
+            $('.delete').fadeIn('fast');
+            $(".deletebtn").css.fadeIn('fast');
+        },
+        function () {
+            $('.delete').fadeOut('fast');
+        });
 
- $(function () {
-   $('.tooltip').hide();//まず隠しておく
-
-   $('#search').hover(//searchの上に乗ったときにフェードイン、アウトする
-   function () {
-       $('.tooltip').fadeIn('fast');
-   },
-   function () {
-       $('.tooltip').fadeOut('fast');
-   });
 });
