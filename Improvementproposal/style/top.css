@@ -15,12 +15,12 @@ body {
         background: #FFF;
         border: solid 3px #6091d3;/*線*/
         border-radius: 10px;/*角の丸み*/
-        
     }
     .box2 p {
         margin: 0; 
         padding: 0;
 }
+
 
 .search {
     font-size: small;
@@ -37,12 +37,15 @@ body {
     border-radius: 5px;
     background: #00aaff;
     box-shadow: 0 4px 0 #0088cc;
-   text-align: center;
+    text-align: center;
     color: white;
-   font-weight: bold;
+    font-weight: bold;
     cursor: pointer;
-    
 
+}
+
+.pdfbtn {
+    margin-top: 10px;
 }
 /* ふきだし */
 
@@ -57,6 +60,11 @@ body {
     display: inline-block;
     margin-left: 30px;
   
+}
+
+.margin {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .tooltip:before {

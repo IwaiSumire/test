@@ -63,16 +63,28 @@
                 
 
                 <div class="sabtitle">
-                <h2>今月改善提案一覧表<h2>
+                <h2>今月の改善提案一覧表<h2>
 
-                        <form action="search.cfm" method="post">
+                        <form action="search.cfm" method="post" class="margin">
                             <span class="search">条件に一致するものを検索する</span>
                             <input type="search" name="search" placeholder="キーワードを入力">
                             <input type="submit" value="検索" id="search" class="inli">
                             <p class="tooltip">検索ができます。</p>
                         </form>
+
+                        
+                        <a href="./pdf.cfm">
+                            <button type="button" class="pdfbtn">PDF出力</button>
+                        </a>
+                        <a href="./excel.cfm">
+                            <button type="button" class="pdfbtn">Excel出力</button>
+                        </a>
+
                     </nav>
                 </div>
+
+
+                
                         <table border="3" class="tab" width="1000px" ALIGN="left">
                             <tr>
                                 <td><b>タイトル</b></td>

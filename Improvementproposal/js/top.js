@@ -16,10 +16,11 @@ $(function () {
     $('.deletebtn').hover(//searchの上に乗ったときにフェードイン、アウトする
         function () {
             $('.delete').fadeIn('fast');
-            $(".deletebtn").css.fadeIn('fast');
+            $(this).css('background-color','red');
         },
         function () {
             $('.delete').fadeOut('fast');
+            $(this).css('background-color', '');
         });
 
 });
