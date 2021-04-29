@@ -1,4 +1,4 @@
-<cfquery datasource="sample" name="toplist">
+<cfquery datasource="sample" name="excel">
     select *
     from suggestion
     join employee
@@ -16,7 +16,7 @@
 
 <cfdocument  format="PDF">
     
-    <div class="sabtitle">
+    <div>
         <h2>今月改善提案一覧表<h2>
 
                 <table border="3" class="tab" width="1000px" ALIGN="left">
@@ -31,7 +31,7 @@
                         <td><b>申請状況</b></td>
                     </tr>
 
-                    <cfoutput query="toplist">
+                    <cfoutput query="excel">
 
                         <tr>
                             <td>#suggestion_title#</td>

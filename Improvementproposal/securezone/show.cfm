@@ -15,6 +15,8 @@
 <html>
     <head><title>詳細画面</title></head>
     <body>
+        
+        <cfinclude  template="header.cfm">
 
         <cfoutput query="show">
 
