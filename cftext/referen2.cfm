@@ -14,7 +14,7 @@
 
     return OneDArray;
 }
-</cfscript>>
+</cfscript>
 
 <cfdump  var="#aOriginal#" label="UDF呼び出し前配列">
 
