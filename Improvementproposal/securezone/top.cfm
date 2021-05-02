@@ -53,6 +53,9 @@
                         <a href="./usershow.cfm">
                             <button type="button" class="btn">登録社員一覧はこちら</button>
                         </a>
+                        <a href="./chart.cfm">
+                            <button type="button" class="btn">比較グラフはこちら</button>
+                        </a>
                         <a href="./logout.cfm">
                             <button type="button" class="btn">ログアウト</button>
                         </a>
